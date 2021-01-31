@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <title>留言本</title>
+    <style>
+        .form {
+            width: 300px;
+            height: auto !important;
+            margin: 0 auto;
+            border: 0;
+        }
+        
+        .form3 {
+            width: 400px;
+        }
+        
+        .form3 input {
+            line-height: 42px;
+            height: 42px;
+            border: 1px solid #ccc;
+            width: 300px;
+        }
+        
+        .form3 textarea {
+            height: 100px;
+            width: 300px;
+            margin-left: 320px;
+            margin-top: -117px;
+        }
+    </style>
+
+    <body>
+        <div class="form">
+            <form class="form3" action="/update?id={{.Data.id}}" method="POST">
+                <p><input name="username" value="{{.Data.username}}" placeholder="请输入姓名"></p>
+                <p><input name="title" value="{{.Data.title}}" placeholder="请输入标题"></p>
+                <p><textarea name="content">{{.Data.content}}</textarea></p>
+                <p><input type="submit"   value="提交">
+                </p>
+            </form>
+        </div>
+    </body>
+</head>
+</html>
