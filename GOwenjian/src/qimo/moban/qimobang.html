@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>提交</title>
+</head>
+<style>
+    .aolg {
+        width: 500px;
+        height: auto !important;
+        margin: 0 auto;
+        border: 0;
+    }
+    
+    .form3 {
+        width: 500px;
+    }
+    
+    .form3 input {
+        line-height: 42px;
+        height: 42px;
+        border: 1px solid #ccc;
+        width: 300px;
+    }
+    
+    .form3 input.gansi {
+        line-height: 30px;
+        height: 30px;
+        border: 1px solid #000000;
+        width: 100px;
+    }
+    
+    .form3 textarea {
+        height: 150px;
+        width: 300px;
+    }
+</style>
+
+<body>
+    <div class="aolg">
+        <h1>商品添加页面 </h1></br>
+        <form class="form3" action="/post" method="post">
+            <p>商品标题：<input name="name" value="" placeholder="请输入标题"></p>
+            <p>商品价格：<input name="jiage" value="" placeholder="请输入价格"></p>
+            <p>商品品牌：<input name="pinpai" value="" placeholder="请输入品牌"></p>
+            <p>商品数量：<input name="shulian" value="" placeholder="请输入数量"></p>
+            <p>商品描述：<textarea name="miaoshu"></textarea></p>
+            <p><input class="gansi" type="submit" value="添加商品"></p>
+        </form>
+    </div>
+</body>
+
+</html>

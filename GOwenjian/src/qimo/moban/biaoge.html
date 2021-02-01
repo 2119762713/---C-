@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>记录板</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0
+    }
+    
+    .aolgg {
+        width: 959px;
+        height: 100%;
+        height: auto;
+        margin: 0 auto;
+        font-size: 14px;
+    }
+    
+    .aolgg ul {
+        margin: auto;
+        margin: 0;
+        padding: 0;
+        border: 1px solid #ccc;
+        height: 35px;
+        line-height: 36px;
+        border-bottom: 1;
+    }
+    
+    .aolgg ul li {
+        list-style: none;
+        text-align: center;
+        float: left;
+        width: 100px;
+        border-right: 1px solid #ccc
+    }
+    
+    .aolgg ul li.iif {
+        width: 300px;
+    }
+    
+    .aolgg ul li.iig {
+        width: 300px;
+    }
+    
+    .aolgg ul li.oop {
+        width: 150px;
+    }
+    
+    .aolgg ul li.ooo {
+        width: 150px;
+    }
+    
+    .aolgg ul li.uut {
+        width: 50px;
+    }
+    
+    .aolgg ul li.uuy {
+        width: 50px;
+    }
+    
+    .aolgg ul li.ttu {
+        width: 150px;
+    }
+    
+    .aolgg ul li.tti {
+        width: 150px;
+    }
+    
+    .ggk {
+        color: brown;
+    }
+    
+    .ggk:hover {
+        color: #000000;
+    }
+</style>
+
+<body>
+    <div class="aolgg">
+        <h1>管理商品信息页面</h1>
+        </br>
+        <h3><a href="/pos" class="ggk">+添加商品</a></h3>
+        <ul>
+            <li class="uut">编号</li>
+            <li class="oop">商品标题</li>
+            <li>商品价格</li>
+            <li>商品品牌</li>
+            <li>商品数量</li>
+            <li class="ttu">添加时间</li>
+            <li class="iif">商品描述</li>
+        </ul>
+        {{range $k,$v := .Qq}}
+        <ul>
+            <li class="uuy">{{$v.Id}}</li>
+            <li class="ooo">{{$v.Name}}</li>
+            <li>{{$v.Jiage}}</li>
+            <li>{{$v.Pinpai}}</li>
+            <li>{{$v.Shulian}}</li>
+            <li class="tti">{{$v.Shijian}}</li>
+            <li class="iig">{{$v.Miaoshu}}</li>
+        </ul>
+        {{end}}
+    </div>
+</body>
+
+</html>

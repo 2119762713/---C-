@@ -1,0 +1,14 @@
+<html>
+
+<head>
+    <title>{{if .B}}提交成功{{else}}提交失败{{end}}</title>
+</head>
+
+<body>
+    <div style="margin:0 auto; width:300px; line-height:50px; font-size:14px;">
+        {{if .B}} 恭喜您，添加商品成功 {{else}} 很遗憾，提添加商品失败 {{end}}
+        <p>您可以： <a href="/aolg">返回商品列表</a> 或者 <a href="/pos">再添加一次商品</a></p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<html>
+<head>
+<title>aolg</title>
+<style>
+
+</style>
+<body>
+
+  你好{{.Name}}
+  {{if .B}}
+  今天天晴
+  {{else}}
+  今天下雨
+  {{end}}
+  
+  {{$yy :="hello"}}
+  <p>{{$yy}}</p>
+  
+  {{range $k, $v := .Slice}}
+  <p>下标值是{{$k}},数值是{{$v}}</p>
+  {{end}}
+</body>
+</head>
+</html>

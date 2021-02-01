@@ -1,0 +1,15 @@
+<html>
+ <head>
+  <title>{{if .B}}删除成功{{else}}删除失败{{end}}</title>
+ </head>
+ <body>
+   <div style="margin:0 auto; width:300px; line-height:50px; font-size:14px;">
+     {{if .B}}
+      恭喜您，删除成功
+     {{else}}
+     很遗憾，删除失败
+     {{end}}
+    <p>您可以： <a href="/liebiao">返回留言列表</a> 或者 <a href="/index">提交一次留言</a></p>
+  </div>
+</body>
+</html>

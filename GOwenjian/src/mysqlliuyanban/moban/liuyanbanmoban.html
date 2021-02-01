@@ -1,0 +1,46 @@
+<html>
+ <head></head>
+<style>
+.boxer { width: 785px; height:auto;margin:0 auto;font-size:14px;}
+.boxer ul { margin:0;padding:0;width:785px; border:1px solid #ccc;height:36px;line-height:36px;border-bottom:0;}
+.boxer ul li {list-style:none; text-align:center; float:left;width:100px; border-right:1px solid #ccc}
+.boxer ul li:last-child{border-right:0}
+.boxer ul.title {background:#efefef}
+.boxer ul.cell {background:#FFF}
+.boxer ul.title:last-child{borer-bottom:1px solid #ccc}
+</style>
+ <body>
+   <div class="boxer">
+     <ul class="title">
+       <li>学号</li>
+       <li>姓名</li>
+       <li>年龄</li>
+      <li>性别</li>
+       <li style="width:200px">身份证</li>
+       
+       <li>手机号</li>
+       <li style="width:70px;">删除</li>
+     </ul>
+    
+     {{range  $k,$v := .List}}
+     <ul class="cell">
+       <li>{{$v.Id}}</li>
+       <li>{{$v.Name}}</li>
+       <li>{{$v.Age}}</li>
+       <li>{{$v.Sex}}</li>
+       <li style="width:200px">{{$v.ID}}</li>
+       <li>{{$v.Phone}}</li>
+       <li style="width:70px;"><a href="javascript:;" onclick="tip({{$v.Id}})">删除</a></li>
+     </ul>
+     {{end}}
+   </div>
+    <script>
+    function tip(id){
+        if( confirm("您确定要删除这一条记录吗？") ){
+          //alert(id)
+          location.href="/delete?id="+id   //传id过去
+        }       
+    }
+    </script>
+ </body> 
+</html>

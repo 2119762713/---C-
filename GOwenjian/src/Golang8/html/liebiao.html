@@ -1,0 +1,115 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>显示留言</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+        
+        .list {
+            width: 500px;
+            height: auto !important;
+            margin: 0 auto
+        }
+        
+        .list ul {
+            width: 500px;
+            height: 100px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+        }
+        
+        .list ul li {
+            list-style: none;
+            width: 100%;
+        }
+        
+        .list ul li.title {
+            height: 40px;
+            border-bottom: 1px solid #efefef;
+            line-height: 40px;
+        }
+        
+        .list ul li.content {
+            height: 58px;
+            padding: 10px;
+            position: relative;
+        }
+        
+        .name {
+            color: red;
+            margin: 0 10px
+        }
+        
+        .t {
+            margin: 0 10px;
+            color: #ccc
+        }
+        
+        .time {
+            color: #999
+        }
+        
+        .t {
+            color: red
+        }
+        
+        .del {
+            position: absolute;
+            bottom: 22px;
+            right: 22px;
+            text-decoration: none;
+            color: black;
+        }
+        
+        .del:hover {
+            color: red;
+        }
+    </style>
+
+    <body>
+        <!--
+    Data = [
+	0 =>  map[string]string{"id":"1", "username":"陈浩民",.... "status":"0"},
+	1 =>  map[string]string{"id":"2", "username":"刘德华",.... "status":"0"},
+	  ... 
+	4 =>  map[string]string{"id":"5", "username":"刘德华",.... "status":"0"},
+	v = map[string]string{"id":"5", "username":"刘德华",.... "status":"0"}
+  v["username"]
+	]
+    -->
+        <div class="list">
+            <h3><a href="/index">发表留言</a><a href="/xiugai">修改留言</a></h3>
+            {{range $k, $v := .Data}}
+            <ul>
+                <li class="title">
+
+                    <span class="name">{{$v.username}}</span>
+                    <span class="c">在</span>
+                    <span class="time">{{$v.timeline}}</span>
+                    <span class="c">发表了留言：</span>
+                    <span class="t">{{$v.title}}</span>
+                </li>
+
+                <li class="content">
+                    {{$v.content}}
+                    <a href="javascript:;" onclick="tip('{{$v.id}}')" class="del">删除</a>
+                </li>
+            </ul>
+            {{end}}
+        </div>
+    </body>
+    <script>
+        function tip(id) {
+            if (confirm('是否要删除')) {
+                //====================
+                location.href = '/delete?id=' + id
+            }
+        }
+    </script>
+</head>
+
+</html>

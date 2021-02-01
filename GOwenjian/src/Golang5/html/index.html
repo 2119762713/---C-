@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <title>aolg</title>
+    <style>
+        ul {
+            padding: 0;
+            margin: 0;
+        }
+        
+        .fenleilist {
+            width: 300px;
+            height: auto !important;
+            margin: 0 auto;
+        }
+        
+        .fenleilist ul {
+            width: 300;
+            height: 35px;
+            line-height: 36px;
+            border: 1px solid #222222;
+        }
+        
+        .fenleilist ul li {
+            width: 150px;
+            height: 35px;
+            list-style: none;
+            float: left;
+        }
+        
+    </style>
+
+    <body>
+        <div class="fenleilist">
+            <ul>
+                <li>编名</li>
+                <li>分类名</li>
+            </ul>
+            {{range $v,$k :=.Date}}
+            <ul>
+                <li>{{$k.id}}</li>
+                <li>{{$k.name}}</li>
+            </ul>
+            {{end}}
+        </div>
+    </body>
+</head>
+
+</html>
