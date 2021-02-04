@@ -1,0 +1,3 @@
+﻿  yun.c
+D:\xuxin\C_C++yunyan\yun\yun\yun.c(66,1): warning C4133: “初始化”: 从“int *”到“char *”的类型不兼容
+  yun.vcxproj -> D:\xuxin\C_C++yunyan\yun\x64\Debug\yun.exe
