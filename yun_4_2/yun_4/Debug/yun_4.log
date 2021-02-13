@@ -1,0 +1,5 @@
+﻿  yun_4.c
+D:\xuxin\C_C++yunyan\yun_4\yun_4\yun_4.c(8,15): error C2146: 语法错误: 缺少“)”(在标识符“scanf”的前面)
+D:\xuxin\C_C++yunyan\yun_4\yun_4\yun_4.c(8,9): warning C4473: “printf”: 没有为格式字符串传递足够的参数
+D:\xuxin\C_C++yunyan\yun_4\yun_4\yun_4.c(8,9): message : 占位符和其参数预计 1 可变参数，但提供的却是 0 参数
+D:\xuxin\C_C++yunyan\yun_4\yun_4\yun_4.c(8,9): message : 缺失的可变参数 1 为格式字符串“%d”所需
