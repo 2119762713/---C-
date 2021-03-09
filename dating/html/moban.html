@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>打印主界面</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0
+    }
+    
+    .aolg {
+        position: relative;
+        width: 500px;
+        height: 100%;
+        margin: 0 auto;
+        border: 1px solid rgb(0, 68, 255);
+    }
+    
+    .aolg ul li {
+        list-style: none;
+    }
+    
+    .aolg ul h2 {
+        display: inline;
+    }
+    
+    .aolg ul h2 form input {
+        position: absolute;
+        height: 25px;
+        top: 4px;
+    }
+</style>
+
+<body>
+    <div class="aolg">
+        <ul>
+            <h2>
+                <li class="b" style="display: inline;">{{.Id}}.</li>选择题问答：
+                <form class="form3" action="/hos" method="post" style="display: inline;"><input type="text" name="GK"></form>
+            </h2>
+            <li class="b">问题：{{.Phone}}</li>
+            <li class="b">1.{{.Name}}</li>
+            <li class="a">2.{{.Sex}}</li>
+            <li class="b">3.{{.ID}}</li>
+            <li class="a">4.{{.Age}}</li>
+        </ul>
+    </div>
+</body>
+
+</html>
