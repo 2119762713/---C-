@@ -1,0 +1,43 @@
+<html>
+<head>
+  <title>检查问答</title>
+</head>
+<body>
+   {{.Tip}} 
+  
+    
+  <script>
+     //倒计时
+     setTimeout(function(){
+        location.href="/post?id={{.Id}}" //js Id是当前的答题题号             
+    }, 2000)
+    
+    //localStorage //本地存储机制
+     
+    
+    var n = localStorage.getItem("all")  //0 1 2
+    if (n) {
+       n = parseInt(n) +1      
+    }else{
+      n = 1
+    }
+    localStorage.setItem("all", n) //答题总数 1 2 3
+         
+    var  Isok = {{.Isok}}    //1 0 1
+    var m = localStorage.getItem("ok")  //0 1 1
+    if (Isok){
+      if (m) {
+       m = parseInt(m) +1 //     
+      }else{
+       m =1
+      }
+      localStorage.setItem("ok", m) //答题总数     1 2
+    }
+    
+    alert("正确率是" + (m/n) *100 + "%" )
+    
+    
+
+  </script>
+</body>
+</html>

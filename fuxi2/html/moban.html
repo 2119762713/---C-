@@ -1,0 +1,69 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>复习</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0
+    }
+    
+    .box {
+        width: 600px;
+        height: 400px;
+        border: 1px solid #ccc;
+        margin: 0 auto;
+    }
+    
+    .timu {
+        margin: 20px;
+    }
+    
+    ul {
+        margin: 0;
+        padding: 0;
+        margin-lefT: 20px;
+    }
+    
+    ul li {
+        list-style: none;
+        margin-bottom: 12px;
+    }
+    
+    button {
+        padding: 4px 20px;
+        background: #ff9900;
+        color: #FFF;
+        border: 0
+    }
+</style>
+
+<body>
+    <div class="box">
+    {{if ne .WenTing ""}}
+        <div class="time"></div>
+        <form action="/Ho" method="GET">
+            <input name="id" type="hidden" value="{{.Id}}">
+            <h3>{{.Id}}.{{.WenTing}}</h3>
+            <ul class="bbs">
+                <li><input name="xx" type="radio" value="1">{{.A}}</li>
+                <li><input name="xx" type="radio" value="2">{{.B}}</li>
+                <li><input name="xx" type="radio" value="3">{{.C}}</li>
+                <li><input name="xx" type="radio" value="4">{{.D}}</li>
+            </ul>
+            <div class="btn">
+                <button>提交</button>
+            </div>
+        </form>
+    </div>
+    {{else}}
+        题目已经答完
+      {{end}}
+    </div>
+</body>
+
+</html>
